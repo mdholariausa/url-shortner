@@ -12,6 +12,5 @@ sudo yum install mysql56-devel
 gem install bundle
 bundle install
 
-sudo yum install nodejs
 rake db:create
 rake db:migrate

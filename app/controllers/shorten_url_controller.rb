@@ -8,6 +8,11 @@ class ShortenUrlController < ApplicationController
   end
 
   def show
+    @visit = ShortenVisit.new
+    @visit.short_url = @url.short_url
+    @visit.from_ip = request.remote_ip
+    @visit.user_agent = request.user_agent
+    @visit.save
   	redirect_to @url.sanitized_url
   end
 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shorten URL</title>
+</head>
+<body>
+  <center>
+    <h1>Enter URL</h1>
+	<form action="shorten_url/create" method="post">
+	  <input type="text" value="" name="original_url" />
+	  <input type="submit" value="Submit" />
+	</form>
+	<h5><%= @error_msg %></h5>
+  </center>
+</body>
+</html>

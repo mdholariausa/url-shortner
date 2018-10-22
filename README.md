@@ -15,8 +15,10 @@ rails s
 Available under table "shorten_visits"
 
 Schema:-
+```
 id
 short_url
 from_ip
 user_agent
 created_at
+```

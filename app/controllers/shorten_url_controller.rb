@@ -5,6 +5,8 @@ class ShortenUrlController < ApplicationController
   def index
   	@url = ShortenUrl.new
   	@error_msg = params[:error_msg]
+    @visits = ShortenVisit.new
+    @all_visits = @visits.total_visits
   end
 
   def show

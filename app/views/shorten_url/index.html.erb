@@ -2,6 +2,23 @@
 <html>
 <head>
   <title>Shorten URL</title>
+  <style>
+	table {
+	    font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	/*tr:nth-child(even) {
+	    background-color: #dddddd;
+	}*/
+  </style>
 </head>
 <body>
   <center>
@@ -12,5 +29,20 @@
 	</form>
 	<h5><%= @error_msg %></h5>
   </center>
+  <table>
+	
+	<tr>
+	  <th>URL</th>
+	  <th>Visits</th>
+	</tr>
+	
+	<% @all_visits.each do |v| %>
+	<tr>
+   	  <td><%= v.sanitized_url %></td>
+   	  <td><%= v.visits %></td>
+   	<tr/>
+	<% end %>
+
+  </table>
 </body>
 </html>

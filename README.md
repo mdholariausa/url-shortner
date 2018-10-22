@@ -1,25 +1,22 @@
-# README
+# URL Shortner
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You will need `ruby > 2.4.2` and MySQL database
 
-Things you may want to cover:
+To Launch, do this:
 
-* Ruby version
+```
+setup.sh
+rails s
+```
 
-* System dependencies
 
-* Configuration
+### Click Activities
 
-* Database creation
+Available under table "shorten_visits"
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# url-shortner
+Schema:-
+id
+short_url
+from_ip
+user_agent
+created_at
